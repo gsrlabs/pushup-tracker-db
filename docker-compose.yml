@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:14
+    container_name: pushup-db
+    environment:
+      POSTGRES_USER: pushup_user
+      POSTGRES_PASSWORD: simplepass123
+      POSTGRES_DB: pushup_tracker
+      POSTGRES_HOST_AUTH_METHOD: md5  # Явно указываем метод аутентификации
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./docker/postgres/initdb:/docker-entrypoint-initdb.d
+
+volumes:
+  postgres-data:
