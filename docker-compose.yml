@@ -4,7 +4,7 @@ services:
     container_name: pushup-db
     environment:
       POSTGRES_USER: pushup_user
-      POSTGRES_PASSWORD: simplepass123
+      POSTGRES_PASSWORD: isXzryYpeg9aK7bfDJNu
       POSTGRES_DB: pushup_tracker
       POSTGRES_HOST_AUTH_METHOD: md5  # Явно указываем метод аутентификации
     ports:
